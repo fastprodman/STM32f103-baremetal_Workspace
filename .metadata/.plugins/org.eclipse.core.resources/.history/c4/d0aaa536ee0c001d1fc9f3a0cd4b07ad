@@ -1,0 +1,12 @@
+#include "stm32f1xx.h"
+
+#define GPIOCEN (1U<<4)
+#define PIN13 (1U<<13)
+
+int main(void){
+
+	//RCC->
+	while(1){
+
+	}
+}

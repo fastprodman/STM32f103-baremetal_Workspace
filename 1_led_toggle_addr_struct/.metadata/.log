@@ -1,0 +1,22 @@
+!SESSION 2022-07-21 23:40:50.310 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-07-21 23:41:41.362
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-07-21 23:41:41.446
+!MESSAGE Log4j initialized with config file D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\0_led_toggle_addr\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-07-21 23:41:49.812
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2022-07-21 23:45:51.148
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-07-21 23:45:51.148
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-07-21 23:45:51.148
+!MESSAGE D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\0_led_toggle_addr overlaps the workspace location: D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\0_led_toggle_addr
