@@ -1,0 +1,10 @@
+02:15:21 **** Build of configuration Debug for project 7_uart_modilar ****
+make -j8 all 
+arm-none-eabi-size   7_uart_modilar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5208	    108	   1588	   6904	   1af8	7_uart_modilar.elf
+Finished building: default.size.stdout
+ 
+
+02:15:22 Build Finished. 0 errors, 0 warnings. (took 551ms)
+
