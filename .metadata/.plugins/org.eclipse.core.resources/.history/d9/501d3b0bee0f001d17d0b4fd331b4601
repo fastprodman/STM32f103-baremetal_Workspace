@@ -11,7 +11,8 @@ char key;
 int main(void){
 
 	RCC->APB2ENR |= GPIOCEN;
-	GPIOC->CRH = (((GPIOC->CRH &~(1U<<23))&~(1U<<22))|(1U<<21))&~(1U<<20);
+	GPIOC->CRH = (GPIOC->CRH &~(1U<<23))&~(1U<<22);
+	GPIOC->CRH = (GPIOC->CRH |(1U<<21))&~(1U<<20);
 
 	uart2_rxtx_init();
 

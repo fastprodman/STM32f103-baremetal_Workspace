@@ -47,12 +47,12 @@ void uart2_rxtx_init(void){
 	RCC->APB2ENR |= GPIOAEN; // clock enabled
 
 	//2.Set PA2 mode to alternate function mode
-	GPIOA->CRL = (((GPIOA->CRL |(1U<<9)|(1U<<8)|(1U<<11))&~(1U<<10))|(1U<<13)|(1U<<12)|(1U<<15))&~(1U<<14); //output 50 mhz max
+	GPIOA->CRL = (GPIOA->CRL |(1U<<9)|(1U<<8)|(1U<<11))&~(1U<<10); //output 50 mhz max
 	//3.Set PA2 alternate func mode to UART_TX
 	//by default
 
 	//1.Set PA3 mode to alternative function
-	//GPIOA->CRL = (GPIOA->CRL |(1U<<13)|(1U<<12)|(1U<<15))&~(1U<<14);
+	GPIOA->CRL = (GPIOA->CRL |(1U<<13)|(1U<<12)|(1U<<15))&~(1U<<14);
 
 	//Config uart module
 	//enable clock access to uart2
