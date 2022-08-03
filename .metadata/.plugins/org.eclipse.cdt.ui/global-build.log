@@ -1,21 +1,7 @@
-13:02:31 **** Incremental Build of configuration Debug for project 8_uart_rx ****
+20:56:57 **** Build of configuration Debug for project 6_uart_printf ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "8_uart_rx.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\8_uart_rx\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_uart_rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 8_uart_rx.elf
- 
-arm-none-eabi-size   8_uart_rx.elf 
-arm-none-eabi-objdump -h -S  8_uart_rx.elf  > "8_uart_rx.list"
+arm-none-eabi-size   6_uart_printf.elf 
    text	   data	    bss	    dec	    hex	filename
-    836	      8	   1568	   2412	    96c	8_uart_rx.elf
-Finished building: default.size.stdout
- 
-Finished building: 8_uart_rx.list
- 
-13:02:39 **** Incremental Build of configuration Debug for project 8_uart_rx ****
-make -j8 all 
-arm-none-eabi-size   8_uart_rx.elf 
-   text	   data	    bss	    dec	    hex	filename
-    836	      8	   1568	   2412	    96c	8_uart_rx.elf
+   5204	    108	   1588	   6900	   1af4	6_uart_printf.elf
 Finished building: default.size.stdout
  
