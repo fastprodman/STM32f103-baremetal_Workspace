@@ -2,26 +2,18 @@
 #include <stdint.h>
 #include "stm32f1xx.h"
 #include "uart.h"
+#include "adc.h"
 
-#define GPIOCEN (1U<<4)
-#define PIN13 (1U<<13)
-
-char key;
+uint32_t sensor_value;
 
 int main(void){
 
-	RCC->APB2ENR |= GPIOCEN;
-	GPIOC->CRH = (((GPIOC->CRH &~(1U<<23))&~(1U<<22))|(1U<<21))&~(1U<<20);
-
-	uart2_rxtx_init();
-
+	uart2_tx_init();
+	pa1_adc_init();
 	while(1){
-		key = uart2_read();
-		if(key == '1'){
-			GPIOC->ODR |= PIN13;
-		}else{
-			GPIOC->ODR &= ~PIN13;
-		}
+		start_conversion();
+		sensor_value = adc_read();
+		printf("Sensor value : %d \n\r", (int)sensor_value);
 	}
 
 }
