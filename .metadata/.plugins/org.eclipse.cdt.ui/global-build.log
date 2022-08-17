@@ -1,21 +1,21 @@
-16:24:34 **** Incremental Build of configuration Debug for project 9_adc ****
+18:18:06 **** Incremental Build of configuration Debug for project 13_OutputCompare ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/adc.o"
-arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\9_adc\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc.elf
+arm-none-eabi-gcc "../Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/tim.d" -MT"Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/tim.o"
+arm-none-eabi-gcc -o "13_OutputCompare.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\13_OutputCompare\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13_OutputCompare.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 13_OutputCompare.elf
  
-arm-none-eabi-size   9_adc.elf 
-arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
+arm-none-eabi-size   13_OutputCompare.elf 
+arm-none-eabi-objdump -h -S  13_OutputCompare.elf  > "13_OutputCompare.list"
    text	   data	    bss	    dec	    hex	filename
-   5364	    108	   1588	   7060	   1b94	9_adc.elf
+    684	      8	   1568	   2260	    8d4	13_OutputCompare.elf
 Finished building: default.size.stdout
  
-Finished building: 9_adc.list
+Finished building: 13_OutputCompare.list
  
-16:24:40 **** Incremental Build of configuration Debug for project 9_adc ****
+18:18:13 **** Incremental Build of configuration Debug for project 13_OutputCompare ****
 make -j8 all 
-arm-none-eabi-size   9_adc.elf 
+arm-none-eabi-size   13_OutputCompare.elf 
    text	   data	    bss	    dec	    hex	filename
-   5364	    108	   1588	   7060	   1b94	9_adc.elf
+    684	      8	   1568	   2260	    8d4	13_OutputCompare.elf
 Finished building: default.size.stdout
  
