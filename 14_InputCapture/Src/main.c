@@ -15,6 +15,7 @@ int main(void){
 	while(1){
 		while(!(TIM3->SR & SR_CC1IF)){
 			timestamp = TIM3->CCR1;
+			TIM3->SR &=~ SR_CC1OF;
 		}
 	}
 
