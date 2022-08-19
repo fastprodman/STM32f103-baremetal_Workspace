@@ -15,7 +15,7 @@ int main(void){
 	tim3_pa6_input_capture();
 	while(1){
 		while(!(TIM3->SR & SR_CC1IF)){
-			for(int i = 0;i<5;i++){
+			for(int i = 0;i<4;i++){
 				timestamps[i]= TIM3->CCR1;
 				TIM3->SR &=~ SR_CC1OF;
 				if (i > 4){

@@ -33,7 +33,7 @@ void tim2_PA0_output_compare(void){
 //	enable clock access to TIM2
 	RCC->APB1ENR |= TIM2EN;
 //	Set prescaler val
-	TIM2->PSC = 80 - 1; // 8MHz / 800 = 10 k
+	TIM2->PSC = 800 - 1; // 8MHz / 800 = 10 k
 	TIM2->EGR |= EGR_UG;
 //	Set autoreload val
 	TIM2->ARR = 10000 - 1;
