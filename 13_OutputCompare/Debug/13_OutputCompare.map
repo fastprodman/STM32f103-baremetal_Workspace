@@ -821,7 +821,7 @@ LOAD d:/st/stm32cubeide_1.10.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_ranges  0x0000000000000010       0x18 ./Src/tim.o
  .debug_ranges  0x0000000000000028       0x20 ./Startup/startup_stm32f103c8tx.o
 
-.debug_macro    0x0000000000000000     0x1019
+.debug_macro    0x0000000000000000     0x1025
  .debug_macro   0x0000000000000000      0x236 ./Src/main.o
  .debug_macro   0x0000000000000236       0x4c ./Src/main.o
  .debug_macro   0x0000000000000282       0x18 ./Src/main.o
@@ -854,19 +854,19 @@ LOAD d:/st/stm32cubeide_1.10.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000000000000dcc       0x16 ./Src/main.o
  .debug_macro   0x0000000000000de2      0x145 ./Src/main.o
  .debug_macro   0x0000000000000f27       0x10 ./Src/main.o
- .debug_macro   0x0000000000000f37       0xe2 ./Src/tim.o
+ .debug_macro   0x0000000000000f37       0xee ./Src/tim.o
 
 .debug_line     0x0000000000000000      0xc69
  .debug_line    0x0000000000000000      0x6c5 ./Src/main.o
  .debug_line    0x00000000000006c5      0x520 ./Src/tim.o
  .debug_line    0x0000000000000be5       0x84 ./Startup/startup_stm32f103c8tx.o
 
-.debug_str      0x0000000000000000    0x56eb6
+.debug_str      0x0000000000000000    0x56ed7
  .debug_str     0x0000000000000000    0x56d61 ./Src/main.o
                                       0x5700a (size before relaxing)
- .debug_str     0x0000000000056d61       0xd9 ./Src/tim.o
-                                      0x53033 (size before relaxing)
- .debug_str     0x0000000000056e3a       0x7c ./Startup/startup_stm32f103c8tx.o
+ .debug_str     0x0000000000056d61       0xfa ./Src/tim.o
+                                      0x53054 (size before relaxing)
+ .debug_str     0x0000000000056e5b       0x7c ./Startup/startup_stm32f103c8tx.o
 
 .comment        0x0000000000000000       0x50
  .comment       0x0000000000000000       0x50 ./Src/main.o

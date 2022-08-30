@@ -1738,3 +1738,33 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-08-30 08:51:05.824
 !MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-08-30 16:31:00.121
+!MESSAGE Indexed '16_uart_rx_interrupt' (4 sources, 64 headers) in 0,507 sec: 2 839 declarations; 4 554 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,027 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-08-30 21:52:25.556
+!MESSAGE Indexed '17_adc_interrupt' (5 sources, 64 headers) in 0,611 sec: 2 725 declarations; 3 805 references; 4 unresolved inclusions; 23 syntax errors; 484 unresolved names (6,9 %)
+
+!ENTRY org.eclipse.core.jobs 2 2 2022-08-30 22:15:19.307
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2022-08-30 22:15:19.139 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-08-30 22:15:29.065
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-08-30 22:15:29.193
+!MESSAGE Log4j initialized with config file D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-08-30 22:15:42.099
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-08-30 22:25:13.219
+!MESSAGE Indexed '18_Systick_interrupt' (6 sources, 65 headers) in 2,03 sec: 2 729 declarations; 3 833 references; 4 unresolved inclusions; 23 syntax errors; 484 unresolved names (6,9 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-08-30 23:40:36.685
+!MESSAGE Indexed '19_Timer_Interrupt' (7 sources, 67 headers) in 0,776 sec: 2 859 declarations; 4 673 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,027 %)

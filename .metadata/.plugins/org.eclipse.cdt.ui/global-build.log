@@ -1,14 +1,21 @@
-12:16:14 **** Incremental Build of configuration Debug for project 15_InputInterrupt ****
+23:54:57 **** Incremental Build of configuration Debug for project 19_Timer_Interrupt ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/exti.d" -MT"Src/exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/exti.o"
-arm-none-eabi-gcc -o "15_InputInterrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\15_InputInterrupt\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_InputInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 15_InputInterrupt.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "19_Timer_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\19_Timer_Interrupt\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="19_Timer_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 19_Timer_Interrupt.elf
  
-arm-none-eabi-size   15_InputInterrupt.elf 
-arm-none-eabi-objdump -h -S  15_InputInterrupt.elf  > "15_InputInterrupt.list"
+arm-none-eabi-size   19_Timer_Interrupt.elf 
+arm-none-eabi-objdump -h -S  19_Timer_Interrupt.elf  > "19_Timer_Interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   5384	    108	   1588	   7080	   1ba8	15_InputInterrupt.elf
+   5372	    108	   1588	   7068	   1b9c	19_Timer_Interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 15_InputInterrupt.list
+Finished building: 19_Timer_Interrupt.list
+ 
+23:55:01 **** Incremental Build of configuration Debug for project 19_Timer_Interrupt ****
+make -j8 all 
+arm-none-eabi-size   19_Timer_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5372	    108	   1588	   7068	   1b9c	19_Timer_Interrupt.elf
+Finished building: default.size.stdout
  

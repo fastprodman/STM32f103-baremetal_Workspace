@@ -602,10 +602,10 @@ LOAD d:/st/stm32cubeide_1.10.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x0000000000000000      0x55a ./Src/main.o
  .debug_line    0x000000000000055a       0x84 ./Startup/startup_stm32f103c8tx.o
 
-.debug_str      0x0000000000000000    0x52ea8
- .debug_str     0x0000000000000000    0x52e2c ./Src/main.o
-                                      0x53057 (size before relaxing)
- .debug_str     0x0000000000052e2c       0x7c ./Startup/startup_stm32f103c8tx.o
+.debug_str      0x0000000000000000    0x52e9f
+ .debug_str     0x0000000000000000    0x52e23 ./Src/main.o
+                                      0x5304e (size before relaxing)
+ .debug_str     0x0000000000052e23       0x7c ./Startup/startup_stm32f103c8tx.o
 
 .comment        0x0000000000000000       0x50
  .comment       0x0000000000000000       0x50 ./Src/main.o

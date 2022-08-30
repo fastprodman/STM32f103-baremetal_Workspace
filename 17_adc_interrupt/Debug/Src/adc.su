@@ -1,0 +1,5 @@
+D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include/core_cm3.h:1511:22:__NVIC_EnableIRQ	16	static
+../Src/adc.c:15:6:pa1_adc_init	4	static
+../Src/adc.c:30:6:pa1_adc_interrupt_init	8	static
+../Src/adc.c:47:6:start_conversion	4	static
+../Src/adc.c:51:10:adc_read	4	static
