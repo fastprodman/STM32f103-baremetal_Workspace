@@ -90,6 +90,7 @@ int main(void){
  8000174:	f000 f90e 	bl	8000394 <uart2_tx_init>
 	tim2_1hz_interrupt_init();
  8000178:	f000 f8d6 	bl	8000328 <tim2_1hz_interrupt_init>
+
 	while(1){
  800017c:	e7fe      	b.n	800017c <main+0xc>
 	...

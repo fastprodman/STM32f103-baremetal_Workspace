@@ -1,0 +1,23 @@
+#include "stm32f1xx.h"
+#include "i2c.h"
+
+#define APB2_GPIOB	(1U<<3)
+#define APB1_I2C1	(1U<<21)
+#define PB6_CFG		(0xE<<24)
+#define PB7_CFG		(0xE<<28)
+#define CR1_SWRST	(1U<<15)
+
+
+//	PB6 -> I2C1_SCL
+//	PB7 -> I2C1_SDA
+void I2C1_init(void){
+//	enable clock access to GPIOB
+	RCC->APB2ENR |= APB2_GPIOB;
+//	enable clock access to I2C1
+	RCC->APB1ENR |= APB1_I2C1;
+//	set pins to output-alternate function open-drain
+	GPIOB->CRL = (GPIOB->CRL | PB6_CFG | PB7_CFG);
+//	i2c out of reset state
+	I2C1->CR1 &=~ CR1_SWRST;
+
+}

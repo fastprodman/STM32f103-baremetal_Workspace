@@ -1,0 +1,14 @@
+#ifndef UART_H_
+#define UART_H_
+#include "stm32f1xx.h"
+#include <stdint.h>
+#define ISR_TCIF7 (1U<<25)
+#define IFCR_CTCIF7 (1U<<25)
+
+void uart2_rxtx_init(void);
+void uart2_rxtx_interrupt_init(void);
+void dma1_usart_init(uint32_t src, uint32_t dst, uint32_t len);
+void uart2_tx_init(void);
+char uart2_read(void);
+
+#endif /* UART_H_ */

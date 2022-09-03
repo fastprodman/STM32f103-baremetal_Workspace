@@ -1,0 +1,10 @@
+#ifndef SSD1306_H_
+#define SSD1306_H_
+
+#include "i2c.h"
+
+#define DEVID		0x3C
+#define CTL_COMMAND	0x80
+#define DISP_ON		0xA5
+
+#endif /* SSD1306_H_ */

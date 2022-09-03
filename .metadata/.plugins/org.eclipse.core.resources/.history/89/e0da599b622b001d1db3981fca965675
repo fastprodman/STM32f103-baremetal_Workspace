@@ -1,0 +1,13 @@
+/*
+ * ssd345.h
+ *
+ *  Created on: 3 сент. 2022 г.
+ *      Author: Stas
+ */
+
+#ifndef SSD1306_H_
+#define SSD1306_H_
+
+
+
+#endif /* SSD1306_H_ */
