@@ -97,9 +97,9 @@ void I2C1_burstRead(char saddr, char maddr, int n, char* data){
 	}
 }
 
-void I2C1_burstWrite(char saddr, char maddr, int n, char* data){
+void I2C1_burstWriteToAddr(char saddr, char maddr, int n, char* data){
 	volatile int tmp;
-	while(I2C1->CR2 & SR2_BUSY);
+	while(I2C1->SR2 & SR2_BUSY);
 	I2C1->CR1 |= CR1_START;
 	while(!(I2C1->SR1 & I2C_SB));
 	I2C1->DR = saddr << 1;
@@ -115,6 +115,21 @@ void I2C1_burstWrite(char saddr, char maddr, int n, char* data){
 	I2C1->CR1 |= CR1_STOP;
 }
 
+void I2C1_burstWrite(char saddr, int n, char* data){
+	volatile int tmp;
+	while(I2C1->SR2 & SR2_BUSY);
+	I2C1->CR1 |= CR1_START;
+	while(!(I2C1->SR1 & I2C_SB));
+	I2C1->DR = saddr << 1;
+	while(!(I2C1->SR1 & I2C1_ADDRF));
+	tmp = I2C1->SR2;
+	for(int i = 0; i < n; i++){
+		while(!(I2C1->SR1 & SR1_TxE));
+		I2C1->DR = *data++;
+	}
+	while(!(I2C1->SR1 & SR1_BTF));
+	I2C1->CR1 |= CR1_STOP;
+}
 
 
 

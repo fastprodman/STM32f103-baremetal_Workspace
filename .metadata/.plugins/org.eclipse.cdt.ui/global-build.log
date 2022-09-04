@@ -1,21 +1,21 @@
-15:52:00 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
+13:59:18 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/ssd1306.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/ssd1306.d" -MT"Src/ssd1306.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ssd1306.o"
+arm-none-eabi-gcc -o "21_I2C_adxl345.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\21_I2C_adxl345\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="21_I2C_adxl345.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 21_I2C_adxl345.elf
+ 
 arm-none-eabi-size   21_I2C_adxl345.elf 
+arm-none-eabi-objdump -h -S  21_I2C_adxl345.elf  > "21_I2C_adxl345.list"
    text	   data	    bss	    dec	    hex	filename
-    900	      8	   1568	   2476	    9ac	21_I2C_adxl345.elf
+    956	      8	   1568	   2532	    9e4	21_I2C_adxl345.elf
 Finished building: default.size.stdout
  
-15:52:05 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
-make -j8 all 
-arm-none-eabi-size   21_I2C_adxl345.elf 
-   text	   data	    bss	    dec	    hex	filename
-    900	      8	   1568	   2476	    9ac	21_I2C_adxl345.elf
-Finished building: default.size.stdout
+Finished building: 21_I2C_adxl345.list
  
-15:57:03 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
+13:59:20 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
 make -j8 all 
 arm-none-eabi-size   21_I2C_adxl345.elf 
    text	   data	    bss	    dec	    hex	filename
-    900	      8	   1568	   2476	    9ac	21_I2C_adxl345.elf
+    956	      8	   1568	   2532	    9e4	21_I2C_adxl345.elf
 Finished building: default.size.stdout
  

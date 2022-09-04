@@ -1,0 +1,24 @@
+#include "ssd1306.h"
+#include "systick.h"
+
+#define DEVID		0x3C
+#define CTL_COMMAND	0x00
+#define DISP_FULL	0xA5
+#define DISP_OFF	0xAE
+#define DISP_ON		0xAF
+#define NON_INVERSE	0xA6
+#define No_SCROLL	0x2E
+#define CLK_R		0xD5
+#define CLK			0x80
+
+#define V_COMH_R	0xDB
+#define V_COMH_R	0x40
+
+
+void ssd1306_send(char* data){
+	I2C1_burstWrite(DEVID, sizeof(data), data);
+}
+
+void ssd1306_Test(void){
+	char init[] = {CTL_COMMAND, };
+}

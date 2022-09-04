@@ -10,6 +10,7 @@ C_SRCS += \
 ../Src/ssd1306.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
+../Src/systick.c \
 ../Src/uart.c 
 
 OBJS += \
@@ -18,6 +19,7 @@ OBJS += \
 ./Src/ssd1306.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
+./Src/systick.o \
 ./Src/uart.o 
 
 C_DEPS += \
@@ -26,6 +28,7 @@ C_DEPS += \
 ./Src/ssd1306.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
+./Src/systick.d \
 ./Src/uart.d 
 
 
@@ -36,7 +39,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/i2c.d ./Src/i2c.o ./Src/i2c.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/ssd1306.d ./Src/ssd1306.o ./Src/ssd1306.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.d ./Src/uart.o ./Src/uart.su
+	-$(RM) ./Src/i2c.d ./Src/i2c.o ./Src/i2c.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/ssd1306.d ./Src/ssd1306.o ./Src/ssd1306.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/systick.d ./Src/systick.o ./Src/systick.su ./Src/uart.d ./Src/uart.o ./Src/uart.su
 
 .PHONY: clean-Src
 

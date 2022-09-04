@@ -1,10 +1,10 @@
-15:57:03 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
+13:59:20 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
 make -j8 all 
 arm-none-eabi-size   21_I2C_adxl345.elf 
    text	   data	    bss	    dec	    hex	filename
-    900	      8	   1568	   2476	    9ac	21_I2C_adxl345.elf
+    956	      8	   1568	   2532	    9e4	21_I2C_adxl345.elf
 Finished building: default.size.stdout
  
 
-15:57:04 Build Finished. 0 errors, 0 warnings. (took 262ms)
+13:59:21 Build Finished. 0 errors, 0 warnings. (took 185ms)
 

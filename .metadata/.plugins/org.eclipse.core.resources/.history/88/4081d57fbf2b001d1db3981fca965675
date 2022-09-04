@@ -1,0 +1,18 @@
+#include "ssd1306.h"
+
+#define DEVID		0x3C
+#define CTL_COMMAND	0x00
+#define DISP_FULL	0xA5
+#define DISP_ON		0xAF
+#define INVERSE		0xA7
+#define HEIGHT		0x1F
+
+void ssd1306_displayTest(void){
+	char data[3];
+	data[0] = DISP_ON;
+	data[1] = CTL_COMMAND;
+	data[2] = INVERSE;
+	I2C1_burstWrite(DEVID, 0x00, sizeof(data), data);
+}
+
+

@@ -1,5 +1,0 @@
-#include "ssd1306.h"
-
-void ssd1306_displayTest(){
-
-}

@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Stas\Desktop\New folder (2)\ssd1306-stm32HAL-master\example"/>
 			<item value="D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\0_led_toggle_addr"/>
 		</list>
 	</section>
