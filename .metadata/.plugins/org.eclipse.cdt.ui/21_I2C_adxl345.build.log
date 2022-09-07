@@ -1,10 +1,31 @@
-13:59:20 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
+23:32:06 **** Incremental Build of configuration Debug for project 21_I2C_adxl345 ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/ssd1306.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DSTM32F103x6 -c -I../Inc -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Device/ST/STM32F1xx/Include" -I"D:/Stas/Documents/GitHub/STM32f103-baremetal_Workspace/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/ssd1306.d" -MT"Src/ssd1306.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ssd1306.o"
+../Src/ssd1306.c: In function 'ssd1306_displayTest':
+../Src/ssd1306.c:59:59: warning: passing argument 4 of 'I2C1_burstWriteToAddr' makes pointer from integer without a cast [-Wint-conversion]
+   59 |  I2C1_burstWriteToAddr((char)DEVID, (char)CTL_COMMAND, 1, (char)START_LINE);
+      |                                                           ^
+      |                                                           |
+      |                                                           char
+In file included from ../Inc/ssd1306.h:4,
+                 from ../Src/ssd1306.c:1:
+../Inc/i2c.h:8:65: note: expected 'char *' but argument is of type 'char'
+    8 | void I2C1_burstWriteToAddr(char saddr, char maddr, int n, char* data);
+      |                                                           ~~~~~~^~~~
+../Src/ssd1306.c:48:7: warning: unused variable 'reset' [-Wunused-variable]
+   48 |  char reset[] = {DISPL_OFF, DISP_ON};
+      |       ^~~~~
+arm-none-eabi-gcc -o "21_I2C_adxl345.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Stas\Documents\GitHub\STM32f103-baremetal_Workspace\21_I2C_adxl345\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="21_I2C_adxl345.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 21_I2C_adxl345.elf
+ 
 arm-none-eabi-size   21_I2C_adxl345.elf 
+arm-none-eabi-objdump -h -S  21_I2C_adxl345.elf  > "21_I2C_adxl345.list"
    text	   data	    bss	    dec	    hex	filename
-    956	      8	   1568	   2532	    9e4	21_I2C_adxl345.elf
+   1116	      8	   1568	   2692	    a84	21_I2C_adxl345.elf
 Finished building: default.size.stdout
  
+Finished building: 21_I2C_adxl345.list
+ 
 
-13:59:21 Build Finished. 0 errors, 0 warnings. (took 185ms)
+23:32:06 Build Finished. 0 errors, 2 warnings. (took 672ms)
 

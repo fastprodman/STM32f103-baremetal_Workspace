@@ -8,6 +8,8 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="0xA7"/>
+			<item value="0xA6"/>
 			<item value="CRH"/>
 			<item value="uint_32"/>
 		</list>

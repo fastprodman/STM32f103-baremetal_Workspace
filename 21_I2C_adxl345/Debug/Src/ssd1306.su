@@ -1,2 +1,1 @@
-../Src/ssd1306.c:21:6:ssd1306_send	16	static
-../Src/ssd1306.c:25:6:ssd1306_displayTest	24	static
+../Src/ssd1306.c:37:6:ssd1306_displayTest	56	static

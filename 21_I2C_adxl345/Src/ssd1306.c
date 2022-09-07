@@ -1,32 +1,75 @@
 #include "ssd1306.h"
 #include "systick.h"
 
-#define DEVID		0x3C
-#define CTL_COMMAND	0x00
-#define CTL_DATA	0x40
-#define DISP_FULL	0xA5
-#define DISP_RAM	0xA4
-#define DISP_OFF	0xAE
-#define DISP_ON		0xAF
-#define NON_INVERSE	0xA6
-#define INVERSE		0xA7
-#define No_SCROLL	0x2E
-#define CLK_R		0xD5
-#define CLK			0x80
+#define DEVID			0x3C
+#define DEVID2			0x78
+#define CTL_COMMAND		0x00
+#define CTL_DATA		0x40
+#define LOW_COL_ADDR	0x00
+#define HIGH_COL_ADDR 	0x10
+#define DISPL_OFF		0xAE
+#define CLK_D_OSC_FR_R	0xD5
+#define CLK_D_OSC_FR	0x80
+#define MUX_RATIO_R		0xA8
+#define MUX_RATIO		0x1F
+#define DISP_OFFSET_R	0xD3
+#define DISP_OFFSET		0x00
+#define START_LINE		0x40
+#define CHARGE_PUMP_R	0x8D
+#define CHARGE_PUMP		0x14
+#define SEG_RMP			0XA1
+#define COM_OUT_SCAN	0xC8
+#define COM_PIN_R		0xDA
+#define COM_PIN			0x00
+#define CONTRAST_COL_R	0x81
+#define CONTRAST_COL	0x80
+#define PRE_CHARGE_R	0xD9
+#define PRE_CHARGE		0x1F
+#define VCOMH_R			0xDB
+#define VCOMH			0x40
+#define FULL_DISP		0xA4
+#define DISP_ON			0xAF
+#define INVERSE 		0xA7
+#define ADDRESSING_R	0x20
+#define ADDRESSING		0x00
 
-#define V_COMH_R	0xDB
-#define V_COMH		0x40
 
-
-void ssd1306_send(char* data){
-	I2C1_burstWrite(DEVID, sizeof(data), data);
-}
 
 void ssd1306_displayTest(void){
-	char init[] = {CTL_COMMAND, DISP_OFF, CLK_R, CLK};
-	ssd1306_send(init);
-	char start1[] = {CTL_COMMAND, V_COMH_R, V_COMH, DISP_RAM};
-	ssd1306_send(start1);
-	char start2[] = {INVERSE, No_SCROLL, DISP_ON};
-	ssd1306_send(start2);
+//	Start
+	//systickDelayMs(100);
+	char commands[] = {
+			DISPL_OFF, CLK_D_OSC_FR_R, CLK_D_OSC_FR,
+			MUX_RATIO_R, MUX_RATIO,DISP_OFFSET_R, DISP_OFFSET, START_LINE,
+			CHARGE_PUMP_R, CHARGE_PUMP, SEG_RMP, COM_OUT_SCAN, COM_PIN_R,
+			COM_PIN, CONTRAST_COL_R, CONTRAST_COL, PRE_CHARGE_R, PRE_CHARGE,
+			VCOMH_R, VCOMH, ADDRESSING_R, ADDRESSING, FULL_DISP, INVERSE, DISP_ON
+	};
+
+	char reset[] = {DISPL_OFF, DISP_ON};
+
+	for(int i = 0; i < sizeof(commands);i++){
+			I2C1_burstWriteToAddr((char)DEVID, (char)CTL_COMMAND, 1, &commands[i]);
+	}
+
+	for(int i = 0; i < 4095;i++){
+				I2C1_burstWriteToAddr((char)DEVID, (char)CTL_DATA, 1, (char)(0x00));
+	}
+
+	systickDelayMs(1000);
+	I2C1_burstWriteToAddr((char)DEVID, (char)CTL_COMMAND, 1, (char)START_LINE);
+
+
+
+//	I2C1_burstWriteToAddr((char)DEVID, (char)CTL_COMMAND, 1, (char)(0x05));
+//
+//	for(int i = 0; i < 1000;i++){
+//					I2C1_burstWriteToAddr((char)DEVID, (char)CTL_DATA, 1, (char)(0x08));
+//	}
+
+//	systickDelayMs(1000);
+//
+//	for(int i = 0; i < sizeof(reset);i++){
+//				I2C1_burstWriteToAddr((char)DEVID, (char)CTL_COMMAND, 1, &reset[i]);
+//		}
 }
